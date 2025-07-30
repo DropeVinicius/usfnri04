@@ -1053,13 +1053,14 @@
     }
     .titulo-praticar {
         color: #b9e5a9;
-        font-size: 35px;
-        border-bottom: 2px solid #b9e5a9;
-        padding-bottom: 8px;
-        margin-bottom: 20px;
-        text-align: left !important;
-        font-family: 'Bebas Neue', cursive !important;
-        font-weight: lighter !important;
+    font-size: 35px;
+    border-bottom: 2px solid #b9e5a9;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    text-align: left !important;
+    font-family: 'Bebas Neue', cursive !important;
+    font-weight: lighter !important;
+    position: relative; /* necessário para posicionar a seta */
     }
 
     .texto-praticar {
@@ -1077,6 +1078,21 @@
         border-radius: 6px;
         display: block;
     }
+    .seta-baixo {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-left: 2px solid #b9e5a9;
+    border-bottom: 2px solid #b9e5a9;
+    transform: rotate(-45deg);
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: -5px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -50%;
+}
     /* Acordeon styles */
         .acordeon-container {
             margin-top: 20px;
@@ -2749,6 +2765,7 @@
         <section class="card-horizontal-praticar">
             <h2 class="titulo-praticar">
                 SAIBA MAIS
+                <span class="seta-baixo"></span>
             </h2>
             <p class="texto-praticar">
                 As estradas no Estado de São Paulo são muito boas. O que a maioria das estradas têm em comum, é o grande
