@@ -1,0 +1,4325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>Português para Estrangeiros - Unidade 4</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #134969;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #134969;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 220px;
+            max-height: 80vh;
+            overflow-y: auto;
+            border-radius: 5px;
+            z-index: 10;
+            scrollbar-width: thin;
+            scrollbar-color: #fff #134969;
+        }
+        @media (max-width: 400px) {
+            .navbar ul li {
+                padding: 8px;
+                font-size: 0.9em;
+            }
+        }
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #133869; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        /* Para Chrome, Edge e Safari */
+        .navbar ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar ul::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .navbar ul::-webkit-scrollbar-track {
+            background-color: #9f43be;
+        }
+
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1744829642/jf8ihsql9tactxny2lhc.png');
+            background-size: cover; /* preenche tudo */
+            background-position: bottom center; /* mostra mais da parte inferior */
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            opacity: 0.5; /* ou ajuste se quiser efeito */
+            z-index: -1;
+            /* Ajuste de transparência */
+            filter: brightness(0.9); /* Escurece levemente a imagem para maior contraste do texto */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+        
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        @media (max-width: 768px) {
+            .capa-livro::before {
+                background-attachment: scroll; /* remove o parallax */
+                background-position: center center; /* centraliza a imagem */
+            }
+
+            .capa-livro {
+                height: auto; /* deixa o conteúdo definir a altura */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 48px;
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 24px;
+            }
+            }
+
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #134969; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            overflow-x: hidden; /* Impede rolagem horizontal */
+            border-bottom: 2px solid #134969;
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #134969; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            width: 100%;
+            background-color: #809dae70; /* Verde mais claro */
+            padding: 64px 0;
+        }
+                /* Conteúdo centralizado dentro da faixa */
+        .introducao .conteudo-centralizado {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Parágrafos da introdução */
+        .introducao .conteudo-centralizado p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 70vh; /* Reduz a altura da capa */
+            }
+            .capa-livro::before {
+                background-position: center center; /* centraliza melhor no mobile */
+            }
+            .capa-livro .titulo-materia {
+                font-size: 40px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 24px; /* Reduz o tamanho do subtítulo */
+            }
+            .capa-livro .titulo-programa {
+                font-size: 18px;
+            }
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 100%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Estilo base da seção */
+        .secao1 .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .secao1 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Estilo base da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #b9e5a92c;
+            border-bottom: 3px solid #92d678;
+        }
+
+        /* Imagem de topo */
+        .secao1 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao1 .faixa-verde {
+            width: 100%;
+            background-color: #b9e5a9;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao1 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao1 .titulo-verde {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao1 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao1 .faixa-verde .titulo-secao {
+                font-size: 20px;
+            }
+
+            .secao1 p {
+                font-size: 1rem;
+            }
+            .secao1 .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao1 .faixa-verde .titulo-secao {
+                font-size: 20px;
+            }
+
+            .secao1 p {
+                font-size: 0.95rem;
+            }
+        }
+        /* Estilo base da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #3a96a61c;
+            border-bottom: 3px solid #3a95a6;
+        }
+        .secao2 .conteudo-secao {
+            width: 100%;
+            padding: 64px 0;
+            box-sizing: border-box;
+        }
+        .secao2 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Imagem de topo */
+        .secao2 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao2 .faixa-verde {
+            width: 100%;
+            background-color: #3a95a6;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao2 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao2 .titulo-verde {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #3a95a6; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao2 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao2 .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .secao2 p {
+                font-size: 1rem;
+            }
+            .secao2 .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao2 .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .secao2 p {
+                font-size: 0.95rem;
+            }
+        }
+        .dica-box {
+            border: 1px solid #b9e5a9;
+            border-radius: 10px;
+            padding: 40px 20px 20px;
+            max-width: 800px;
+            margin: 60px auto;
+            background-color: #f9fdf7;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        .dica-header-wrapper {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+        }
+
+        /* Círculo com duas bordas brancas e fundo verde claro */
+        .circle-decorator {
+            width: 48px;
+            height: 48px;
+            background-color: #b9e5a9;
+            border-radius: 50%;
+            box-shadow:
+            0 0 0 3px #ffffff,   /* anel interno branco */
+            0 0 0 6px #b9e5a9,   /* compensação da cor de fundo */
+            0 0 0 9px #ffffff;   /* anel externo branco */
+            z-index: 3;
+        }
+
+        .dica-header {
+            background-color: #b9e5a9;
+            border: 2px solid #FFF;
+            border-radius: 999px;
+            height: 48px; /* mesma altura do círculo */
+            display: flex;
+            align-items: center;
+            padding: 0 48px 0 56px; /* removemos padding vertical, mantemos horizontal */
+            margin-left: -12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .dica-title {
+            color: #FFF;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .dica-content {
+            color: #000;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .dica-content a {
+            color: #015A42;
+            text-decoration: none;
+        }
+
+        .dica-content a:hover {
+            text-decoration: underline;
+        }
+         /* Título do Slider */
+        .slider-quadrinhos .titulo-slider {
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #333;
+        
+        }
+
+        .slider-quadrinhos .titulo-slider .figura {
+            color: #015A42;
+        }
+
+        /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 2px solid #b9e5a9;
+            overflow: hidden;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+        }
+
+        /* Imagens do slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .slide {
+            display: none;
+            max-width: 100%;
+            max-height: 600px;
+            margin: 0 auto;
+            border-radius: 10px;
+            object-fit: contain;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .slide.ativo {
+            display: block;
+        }
+
+        /* Setas */
+        .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #b9e5a9;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta.esquerda {
+            left: 0;
+        }
+
+        .seta.direita {
+            right: 0;
+        }
+
+            /* Responsivo */
+        @media (max-width: 768px) {
+            .slider-container {
+                padding: 15px;
+            }
+
+            .slide {
+                max-width: 100%;
+                max-height: 350px;
+            }
+
+            .seta {
+                font-size: 24px;
+            }
+
+            .slider-quadrinhos .titulo-slider {
+                font-size: 18px;
+            }
+        }
+                /* Indicadores de slide (bolinhas) */
+        .slider-indicadores {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .slider-indicadores .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .slider-indicadores .dot.ativo {
+            background-color: #b9e5a9;
+        }
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+            max-width: 500px;
+        }
+        .fonte-tabela {
+            font-size: 12px !important;
+            color: #000 !important;
+            display: flex;
+            justify-content: left;
+            margin-top: -15px !important;
+            font-style: italic;
+        }
+        @media (max-width: 768px){
+            .fonte-tabela {
+                margin-top: -5px !important;
+                font-size: 12px !important;
+                color: #333 !important;
+            }
+        }
+        .fonte-quadro {
+            font-size: 12px !important;
+            font-style: italic !important;
+            text-align: center !important;
+            color: #555 !important; /* tom discreto */
+        }
+        .text-italic {
+            font-style: italic;
+        }
+        /* Seção geral */
+        .tabs-section {
+            max-width: 800px;
+            margin: 40px auto;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cabeçalho das tabs */
+        .tabs-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 0;
+            background-color: transparent;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        /* Botões de cada aba */
+        .tab-btn {
+            background-color: #b9e5a9;
+            color: #FFF;
+            border: 2px solid #b9e5a9;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+        /* Botões de cada aba */
+        .tab-btnb {
+            background-color: #134969;
+            color: #FFF;
+            border: 2px solid #134969;
+            border-bottom: none;
+            padding: 12px 20px;
+            margin: 0;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            min-width: 120px;
+            white-space: nowrap;
+            /* NOVO: Impede que o botão mude de tamanho */
+            flex: 0 0 auto;
+            width: auto;
+        }
+        /* Hover melhorado */
+        .tab-btn:hover {
+            background-color: #b9e5a9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .tab-btnb:hover {
+            background-color: #134969;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Estado ativo OTIMIZADO */
+        .tab-btn.ativo {
+            background-color: white;
+            color: #015A42;
+            border-color: #b9e5a9;
+            border-bottom: 2px solid #b9e5a9;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-btnb.ativo {
+            background-color: white;
+            color: #134969;
+            border-color: #134969;
+            border-bottom: 2px solid #134969;
+            z-index: 3;
+            margin-bottom: -2px;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+        }
+        /* Focus para acessibilidade */
+        .tab-btn:focus,
+        .tab-btnb:focus {
+            outline-offset: 2px;
+        }
+
+        .tab-btn:focus-visible,
+        .tab-btnb:focus-visible {
+            box-shadow: 0 0 0 3px rgba(58, 149, 166, 0.3);
+        }
+        /* Conteúdo das tabs - VERSÃO OTIMIZADA COM ALTURA FIXA */
+        .tabs-content {
+            border: 2px solid #b9e5a9;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+
+        .tabs-contentb {
+            border: 2px solid #134969;
+            border-radius: 0 8px 8px 8px;
+            background-color: white;
+            padding: 20px;
+            display: none;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* NOVO: Define altura mínima fixa para evitar "dança" dos botões */
+            min-height: 150px;
+            /* NOVO: Garante que o container mantenha tamanho consistente */
+            box-sizing: border-box;
+        }
+        /* Estados ativos do conteúdo */
+        .tabs-content.ativo,
+        .tabs-contentb.ativo {
+            display: block;
+        }
+
+        .tab-content {
+            display: none;
+            line-height: 1.6;
+            color: #374151;
+            /* NOVO: Garante que o conteúdo não force expansão */
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .tab-content.ativo {
+            display: block;
+        }
+
+        /* Estilização do conteúdo interno */
+        .tab-content p {
+            margin-bottom: 12px;
+        }
+
+        .tab-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tab-content strong {
+            color: #000;
+        }
+
+        /* Remove o ::after antigo */
+        .tab-btn.ativo::after,
+        .tab-btnb.ativo::after {
+            display: none;
+        }
+
+        /* Regras de ocultação otimizadas */
+        .tab-content:not(.ativo),
+        .tabs-content:not(.ativo),
+        .tabs-contentb:not(.ativo) {
+            display: none;
+        }
+
+        /* Responsividade melhorada */
+        @media screen and (max-width: 768px) {
+            .tabs-header {
+                justify-content: center;
+            }
+
+            .tab-btn,
+            .tab-btnb {
+                flex: 1 1 45%;
+                font-size: 13px;
+                padding: 10px 15px;
+                min-width: 100px;
+            }
+
+            /* NOVO: Ajusta altura mínima em mobile */
+            .tabs-content,
+            .tabs-contentb {
+                min-height: 120px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .tab-btn,
+            .tab-btnb {
+                flex: 1 1 100%;
+                font-size: 14px;
+                padding: 12px 16px;
+                margin-bottom: 5px;
+            }
+
+            .tabs-content,
+            .tabs-contentb {
+                padding: 16px;
+                border-radius: 8px;
+                /* NOVO: Altura mínima menor em telas muito pequenas */
+                min-height: 100px;
+            }
+
+            .tabs-section {
+                margin: 20px auto;
+                padding: 0 10px;
+            }
+        }
+
+        /* Melhorias extras para UX */
+        @media (prefers-reduced-motion: reduce) {
+            .tab-btn,
+            .tab-btnb {
+                transition: none;
+            }
+        }
+
+        /* Estado de carregamento (opcional) */
+        .tabs-section.loading .tab-btn,
+        .tabs-section.loading .tab-btnb {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* NOVO: Se você quiser uma altura específica para cada grupo */
+        #grupo-tabs-c .tabs-content {
+            min-height: 180px; /* Ajuste conforme necessário */
+        }
+
+        #grupo-tabs-d .tabs-content {
+            min-height: 160px; /* Ajuste conforme necessário */
+        }
+        .card-horizontal-praticar {
+        border: 2px solid #b9e5a9;
+        padding: 10px 15px;
+        background-color: #f8fdf7;
+        max-width: 800px;
+        margin: 20px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    @media (max-width: 768px) {
+        .card-horizontal-praticar{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+    .titulo-praticar {
+        color: #b9e5a9;
+        font-size: 35px;
+        border-bottom: 2px solid #b9e5a9;
+        padding-bottom: 8px;
+        margin-bottom: 20px;
+        text-align: left !important;
+        font-family: 'Bebas Neue', cursive !important;
+        font-weight: lighter !important;
+    }
+
+    .texto-praticar {
+        font-size: 18px !important;
+        line-height: 1.6 !important;
+        font-family: 'Roboto', sans-serif !important; 
+        color: #333 !important;
+        margin-bottom: 20px;
+        text-align: justify !important;
+    }
+
+    .imagem-praticar {
+        width: 100%;
+        height: auto;
+        border-radius: 6px;
+        display: block;
+    }
+    /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3a95a6;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-headerb {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #134969;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-headerc {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #b9e5a9;
+            color: #015A42;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-headerd {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #134969; /* exemplo: laranja suave */
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #3a95a6;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentb {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #134969;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentc {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #b9e5a9;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+
+        .acordeon-contentd {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; 
+            border: 2px solid #134969; /* mesma cor da header para consistência */
+            border-radius: 0 0 10px 10px; 
+        }
+
+        .acordeon-content p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentb p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentc p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentc h4 {
+            text-align: center;
+
+        }
+        .acordeon-contentd p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .tituloacordeonverde{
+            color: #015A42;
+        }
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+            
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerb.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerc.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+                /* Ícone giratório */
+        .acordeon-headerd.active .acordeon-icon {
+            transform: rotate(180deg);
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+            .acordeon-headerb {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentb {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentb p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+
+            .acordeon-headerc {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentc {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentc p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+            .acordeon-headerd {
+                font-size: 20px;
+                padding: 12px;
+            }
+
+            .acordeon-contentd {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .acordeon-contentd p {
+                margin: 15px;
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+            .acordeon-headerb {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentb {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentb p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+
+            .acordeon-headerc {
+                font-size: 16px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-contentc {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-contentc p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+            .acordeon-headerd {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .acordeon-contentd {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .acordeon-contentd p {
+                margin: 10px;
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+
+            /* Thumbnail com imagem de fundo e botão play */
+        .video-thumbnail {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            border: 2px solid #134969;
+            border-radius: 16px;
+            padding: 20px; /* Espaço entre borda e imagem */
+            box-sizing: border-box;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+         /* Camada da imagem de fundo */
+        .video-bg {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1745434099/k1hkgcwcv7ydys0dxmzu.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            overflow: hidden;
+        }       
+        /* Camada de esverdeamento */
+        .video-bg::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #134a692f;
+            z-index: 1;
+        }
+        /* Ícone de play centralizado */
+        .play-icon {
+            z-index: 1;
+            font-size: 90px;
+            color: #fff;
+            background-color: #134969;
+            border-radius: 25%;
+            width: 150px;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Modal de vídeo */
+        .video-modal {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal .modal-content {
+            position: relative;
+            background-color: #000;
+            padding: 10px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        .video-modal iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .fechar-modal {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 30px;
+            color: white;
+            background: #3a95a6;
+            border-radius: 50%;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        /* === Tema Verde (Padrão) === */
+    .slider-quadrinhos.tema-verde .titulo-slider .figura {
+        color: #015A42;
+    }
+
+    .slider-quadrinhos.tema-verde .slider-container {
+        border: 2px solid #b9e5a9;
+        background-color: #fff;
+    }
+
+    .slider-quadrinhos.tema-verde .seta {
+        color: #b9e5a9;
+    }
+
+    .slider-quadrinhos.tema-verde .slider-indicadores .dot.ativo {
+        background-color: #b9e5a9;
+    }
+
+
+    /* === Tema Azul (Novo) === */
+    .slider-quadrinhos.tema-azul .titulo-slider .figura {
+        color: #004A99;
+    }
+
+    .slider-quadrinhos.tema-azul .slider-container {
+        border: 2px solid #134969;
+        background-color: #f9fbff;
+    }
+
+    .slider-quadrinhos.tema-azul .seta {
+        color: #134969;
+    }
+
+    .slider-quadrinhos.tema-azul .slider-indicadores .dot.ativo {
+        background-color: #134969;
+    }
+   .modal-imagem {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-imagem.ativo {
+  display: flex;
+}
+
+.imagem-modal {
+  max-width: 90%;
+  max-height: 80%;
+  margin-bottom: 20px;
+}
+
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.seta-modal {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.seta-modal.esquerda {
+  left: 20px;
+}
+
+.seta-modal.direita {
+  right: 20px;
+}
+
+.indicador-contador {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 6px 12px;
+  border-radius: 15px;
+}
+
+.indicador-pontos {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.indicador-pontos span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.3);
+  cursor: pointer;
+}
+
+.indicador-pontos span.ativo {
+  background-color: white;
+}
+
+   /* Container principal */
+.flip-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Agora sempre serão 4 por linha */
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 16px; /* espaçamento lateral */
+}
+
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  backface-visibility: hidden;
+  border: 2px solid #134969;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.flip-card-front {
+  background-color: #134969;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: #000;
+  transform: rotateY(180deg);
+  font-size: 13px;
+  line-height: 1.4;
+}
+    .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    }
+/* Responsividade */
+@media (max-width: 768px) {
+  .flip-cards-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .flip-card {
+    min-width: 180px;
+    height: 180px;
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+}
+
+        .slider-texto-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 2px solid #3a95a6;
+            padding: 20px 30px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #FFF;
+            border-radius: 8px;
+        }
+        .slider-texto-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+
+        .slide-texto {
+            display: none;
+            flex-shrink: 0;
+            width: 100%;
+            text-align: center;
+            word-break: keep-all;
+            white-space: normal;
+            
+        }
+
+        .slide-texto.ativo {
+            display: block;
+        }
+
+        .titulo-texto {
+            color: #b9e5a9;
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+            width: 100%;
+        }
+
+        .conteudo-texto {
+            font-size: 16px !important;
+            color: #333 !important;
+            font-family: 'Roboto', sans-serif !important;
+            width: 100%;
+            margin: 0 auto;
+            word-break: normal;
+            white-space: normal;
+            text-align: center !important;
+        }
+        .titulo-texto,
+        .conteudo-texto {
+            word-break: break-word;
+            white-space: normal;
+        }
+        .seta-texto {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            color: #3a95a6;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta-texto.esquerda {
+            left: 0;
+        }
+
+        .seta-texto.direita {
+            right: 0;
+        }
+
+    @media (max-width: 768px) {
+        .titulo-texto {
+            font-size: 20px;
+        }
+
+        .conteudo-texto {
+            font-size: 18px;
+        }
+
+        .seta-texto {
+            font-size: 24px;
+        }
+    }
+        .slider-texto-indicadores {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .dot-texto {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .dot-texto.ativo {
+            background-color: #3a95a6;
+        }
+        /* Estilo base da seção */
+        .secao4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #809dae70;
+            border-bottom: 3px solid #134969;
+        }
+
+        .secao4 .acordeon-container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .secao4 .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .secao4 .titulo-azul {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #134969; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Imagem de topo */
+        .secao4 .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .secao4 .faixa-verde {
+            width: 100%;
+            background-color: #134969;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .secao4 .faixa-verde .titulo-secao {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .secao4 .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .secao4 p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+                 
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .secao4 .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .secao4 p {
+                font-size: 1rem;
+            }
+            .secao4 .imagem-topo {
+                max-height: 180px;
+            }
+            .secao4 .titulo-azul {
+                font-size: 1.2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .secao4 .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .secao4 p {
+                font-size: 0.95rem;
+            }
+        }
+        .secao1 .topicos-destacados {
+            margin-left: 40px;
+            padding-left: 20px;
+            width: 85%;
+        }
+
+        .secao1 .topicos-destacados p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .secao1 .topicos-destacados {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .secao4 .topicos-destacados {
+            margin-left: 40px;
+            padding-left: 20px;
+            width: 85%;
+        }
+
+        .secao4 .topicos-destacados p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .secao4 .topicos-destacados {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        /* Estilos gerais */
+    .slider-texto-container {
+        position: relative;
+        width: 90%;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: #FFF;
+        border-radius: 8px;
+    }
+
+        /* Setas e dots */
+        .seta-texto {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 10;
+        }
+
+        .seta-texto.esquerda { left: 0; }
+        .seta-texto.direita { right: 0; }
+
+        .slider-texto-indicadores {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .dot-texto {
+            height: 12px;
+            width: 12px;
+            margin: 0 6px;
+            background-color: #ccc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* ------------------- */
+        /* TEMAS DE COR        */
+        /* ------------------- */
+
+        /* Tema verde */
+        .tema-verde {
+            border-color: #92d678;
+        }
+        .tema-verde .seta-texto {
+            color: #92d678;
+        }
+        .tema-verde .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Tema roxo */
+        .tema-roxo {
+            border-color: #134969;
+        }
+        .tema-roxo .seta-texto {
+            color: #134969;
+        }
+        .tema-roxo .dot-texto.ativo {
+            background-color: #134969;
+        }
+
+        /* Tema roxo */
+        .tema-green {
+            border-color: #92d678;
+        }
+        .tema-green .seta-texto {
+            color: #92d678;
+        }
+        .tema-green .dot-texto.ativo {
+            background-color: #92d678;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .seta-texto { font-size: 24px; }
+            .conteudo-texto { font-size: 18px; }
+        }
+
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+            font-weight: normal; /* Evita que o título fique em negrito */
+            text-align: center;
+        }
+        .text-greenv{
+            color: #015A42;
+            font-weight: bold;
+        }
+           /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .quadroimg {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            box-sizing: border-box;
+        }
+
+        .quadroimg img {
+            max-width: 150%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .quadroimg {
+                width: 90%;
+                padding: 8px;
+            }
+
+            .quadroimg img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .fonte-imagem {
+                width: 90%;
+                font-size: 11px !important;
+            }
+
+            .titulo-quadrov {
+                font-size: 16px;
+                text-align: center;
+                margin-top: 30px;
+            }
+        }
+        .text-italicu{
+            font-style: italic;
+            text-decoration: underline;
+        }
+        /* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL */
+        /* Área da atividade */
+        .atividade-sectionb {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #cccccc28;
+            border: 2px solid #134969;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Cabeçalho com título e imagem */
+        .atividade-headerb {
+            display: flex;
+            justify-content: space-between; /* Agora título na esquerda e imagem na direita */
+            align-items: center;
+            border-bottom: 2px solid #134969;
+            padding-bottom: 5px;
+        }
+
+        .atividade-headerb h2 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: normal;
+            color: #134969;
+            font-size: 35px;
+            margin: 0;
+        }
+
+        .atividade-headerb img {
+            height: 60px;
+        }
+
+        /* Texto abaixo */
+        .atividade-textob {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Imagem clicável centralizada */
+        .atividade-quizz {
+            text-align: center; /* Centraliza o conteúdo interno */
+        }
+
+        .atividade-quizz img {
+            width: 120px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .atividade-quizz img:hover {
+            transform: scale(1.05);
+        }
+        .btn-fechar-quizz {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: #134969;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            z-index: 999;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-fechar-quizz:hover {
+            background-color: #2e7e8e;
+        }
+        @media (max-width: 768px) {
+            .atividade-sectionb {
+                padding: 15px;
+                margin: 20px 10px;
+            }
+
+            .atividade-headerb {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+                text-align: left;
+            }
+
+            .atividade-headerb h2 {
+                font-size: 28px;
+                text-align: left;
+            }
+
+            .atividade-headerb img {
+                height: 50px;
+                align-self: flex-end; /* mantém a imagem à direita se desejar */
+            }
+
+            .atividade-textob {
+                font-size: 15px;
+                text-align: justify;
+            }
+
+            .atividade-quizz img {
+                width: 100px;
+            }
+        }
+    /* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL *//* ATIVIDADE AGORA É SUA VEZ GENIALLY AZUL */
+         /* Estilo base da seção */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #b9e5a92c;
+            border-bottom: 3px solid #92d678;
+        }
+
+        /* Imagem de topo */
+        .conclusao .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .conclusao .faixa-verde {
+            width: 100%;
+            background-color: #92d678;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .conclusao .faixa-verde .titulo-secao {
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 10px auto 10px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .conclusao .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .conclusao p {
+            font-size: 19px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .conclusao .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .conclusao p {
+                font-size: 1rem;
+            }
+            .conclusao .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .conclusao .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .conclusao p {
+                font-size: 0.95rem;
+            }
+        }
+
+         /* Estilo base da seção */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            background-color: #3a96a657;
+            border-bottom: 3px solid #3a95a6;
+        }
+
+        /* Imagem de topo */
+        .referencias .imagem-topo {
+            width: 100%;
+            height: auto;
+            max-height: 290px; /* ajuste essa altura conforme necessário */
+            object-fit: cover; /* garante que a imagem preencha sem distorcer */
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF;
+        }
+
+        /* Faixa verde */
+        .referencias .faixa-verde {
+            width: 100%;
+            background-color: #3a95a6;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+
+        .referencias .faixa-verde .titulo-secao {
+            font-size: 50px;
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            color: #FFF; /* Cor verde */
+            width: 90%;
+            margin: 10px auto 10px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+        .referencias .titulo-verde {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #b9e5a9; /* Cor verde */
+            width: 90%;
+            max-width: 800px;
+            text-align: left;
+        }
+        /* Parágrafo padrão */
+        .referencias p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px auto;
+            width: 90%;
+            max-width: 800px;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .referencias .faixa-verde .titulo-secao {
+                font-size: 30px;
+            }
+
+            .referencias p {
+                font-size: 1rem;
+            }
+            .referencias .imagem-topo {
+                max-height: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .faixa-verde .titulo-secao {
+                font-size: 24px;
+            }
+
+            .referencias p {
+                font-size: 0.95rem;
+            }
+        }
+        .conteudo-secao {
+            width: 100% !important;
+            padding: 64px 0 !important; /* padding vertical conforme solicitado */
+            box-sizing: border-box !important;
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color:  #92d678;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #93d67875;
+            }
+
+            /* Estilização do rodapé */
+        .footer {
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .logo-final {
+            background-color: #b9e5a92c;
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 3px solid #015A42;
+        }
+
+        .logo-final img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
+        /* Nova seção com os títulos ocupando a tela inteira */
+        .ficha-titulos {
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .ficha-titulos h2,
+        .ficha-titulos h3 {
+            font-family: 'Bebas Neue', cursive;
+            font-weight: lighter;
+            font-size: 40px;
+            color: #0058B4;
+            margin: 10px 0;
+        }
+
+        /* Mantemos a ficha técnica como estava */
+        .ficha-tecnica {
+            background-color: #FFF;
+            padding: 60px 20px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+
+        .ficha-tecnica p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 15px auto;
+            max-width: 700px;
+        }
+
+        .ficha-tecnica strong {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .paragraforeduzido {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745860739/yt9l3oea3uvrdal8omhx.svg" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao2">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-programa">NÚCLEO DE RELAÇÕES INTERNACIONAIS</h1>
+            <h1 class="titulo-materia">PORTUGUÊS PARA ESTRANGEIROS</h1>
+            <h2 class="subtitulo-professor">Prof Christian Philip Klein</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 4 | PASSEIOS E COMPRAS</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="caixa-texto">
+            <div class="conteudo-centralizado">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá, estudante!</p>
+                <p>
+                    A vida acadêmica é uma fase muito importante em nossas vidas. Durante o período de estudos universitários,
+                    passamos a maior parte do tempo estudando dentro da universidade ou em casa. Para que a experiência
+                    seja o mais enriquecedora possível, o estudante também se beneficia de fazer amizades, praticar esportes,
+                    ter uma vida social e cultural.
+                </p>
+                <p>
+                    Então, o que você gostaria de fazer no seu tempo livre? Em nossa região, temos muitas possibilidades.
+                    Vamos começar pelas movimentações do dia a dia, partindo das formas de transportes até o vocabulário
+                    necessário para você fazer compras e refeições.
+                </p>
+                <p>
+                    Em muitas situações, você precisará pagar pelo serviço, alimento ou produto. Como na maior parte dos
+                    países, o dinheiro vivo (cash) tem sido cada vez menos usado no Brasil. É comum usar-se cartão de
+                    débito/crédito, com senha ou apenas por aproximação, ou o PIX, que é uma transferência imediata de
+                    uma conta corrente bancária para outra. Você escutará uma pergunta, costumeira, no comércio brasileiro:
+                    CPF na Nota Fiscal? O CPF (Certidão de Pessoa Física) pode ser ou não incluído na Nota Fiscal (NF).
+                    Não é sempre automático, como em outros países. Existem programas governamentais estaduais que
+                    oferecem um pequeno retorno dos impostos gastos nas compras, em retribuição do uso do CPF na NF,
+                    com o objetivo de aumentar o controle tributário e a evasão fiscal.
+                </p>
+                <p>
+                Nesta unidade, vamos falar sobre situações cotidianas como utilizar transportes públicos e privados,
+                realizar compras e refeições fora de casa, e até mesmo entender como descrever melhor o que você vê
+                e sente usando adjetivos. Está pronto para explorar mais sobre a região e a cultura?
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="secao1" id="secao1">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                1. TRANSPORTE PÚBLICO E PRIVADO
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                Embora o transporte público possa ser desafiador nas grandes cidades brasileiras, você não terá dificuldades em
+                utilizá-lo em Bragança Paulista, onde tem ônibus gratuito e pago, dependendo do trajeto. A Estrada Ferroviária
+                Bragantina foi desativada em 1967, então não tem transporte ferroviário na cidade. Nas cidades de Campinas e
+                Itatiba, a prefeitura não oferece transporte gratuito, mas você pode locomover-se de ônibus pagando a passagem.
+            </p>
+            <p>
+                Outra possibilidade que é muito popular no Brasil, na maioria das cidades, para curtas distâncias, é o uso
+                de UBER. Trata-se de um aplicativo (disponível para Android e IOS) que conecta passageiros e carros
+                credenciados à empresa de serviço de transporte. Caso você pretenda utilizar este tipo de serviço para
+                uma viagem mais longa, como ir ao aeroporto, por exemplo, é aconselhável você fazer um agendamento.
+            </p>
+            <div class="dica-box">
+                <div class="dica-header-wrapper">
+                    <div class="circle-decorator"></div>
+                    <div class="dica-header">
+                        <span class="dica-title">DICA</span>
+                    </div>
+                </div>
+                <div class="dica-content">
+                    <p>
+                        Sabia que é possível verificar o preço da viagem antes de iniciá-la e escolher o tipo de veículo?
+                        Acesse o link abaixo, para obter mais informações:
+                    </p>
+                    <p>
+                        <a href="https://www.uber.com/br/pt-br/" target="_blank">https://www.uber.com/br/pt-br/</a>.
+                        Acesso em: 08 jul. 2025.
+                    </p>
+                </div>
+            </div>
+            <p>
+                Veja um exemplo de como comprar uma passagem rodoviária para entender melhor como funciona essa
+                solicitação em português:
+            </p>
+        <br>
+        <!-- Slider de Quadrinhos -->
+        <section class="slider-quadrinhos" data-id="quadrinhos1">
+            <h2 class="titulo-slider">
+                <span class="figura">Figura 1.</span> Diálogo de compra de passagem rodoviária
+            </h2>
+        
+            <div class="slider-container">
+                <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+        
+                <div class="slider">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1752791459/Quadrinho_41_1_vkcsb3.png"
+                        alt="Quadrinho 1" class="slide ativo">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1752791459/Quadrinho_41_2_cajd1o.png"
+                        alt="Quadrinho 2" class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1752791459/Quadrinho_41_3_helkvf.png"
+                        alt="Quadrinho 3" class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1752791459/Quadrinho_41_4_ywxqct.png" 
+                        alt="Quadrinho 4" class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1752791459/Quadrinho_41_5_tlnule.png" 
+                        alt="Quadrinho 5" class="slide">
+                </div>
+        
+                <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+            </div>
+        
+            <!-- Agora os dots ficam aqui fora -->
+            <div class="slider-indicadores">
+                <span class="dot" onclick="irParaSlide(0)"></span>
+                <span class="dot" onclick="irParaSlide(1)"></span>
+                <span class="dot" onclick="irParaSlide(2)"></span>
+                <span class="dot" onclick="irParaSlide(3)"></span>
+                <span class="dot" onclick="irParaSlide(4)"></span>
+            </div>
+        
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+            </p>
+        </section>
+        <br>
+        <p>
+            No diálogo acima, você acompanha a compra de uma passagem rodoviária de Bragança Paulista para a
+            capital, São Paulo. A Rodoviária de Bragança Paulista tem saídas de ônibus municipais e intermunicipais.
+            Localizada na Avenida Imigrantes, s/n (sem número), fica no bairro Matadouro. Aberta 24h, você pode
+            telefonar para informações no número (11) 4034-5109.
+        </p>
+        <br>
+        <h1 class="titulo-verde">
+            1.1. TRANSPORTE PÚBLICO GRATUITO
+        </h1>
+        <p>
+            Como a mobilidade urbana tem sido um problema em muitas cidades do mundo, várias prefeituras brasileiras
+            têm adotado a estratégia de oferecer transporte público gratuito por ônibus, evitando assim o acúmulo de
+            veículos particulares nas ruas e avenidas. Em Bragança Paulista, não é diferente.
+        </p>
+        <p>
+            A Prefeitura de Bragança Paulista disponibiliza uma linha de ônibus gratuita, que sai de 15 em 15 minutos,
+            do Terminal Rodoviário Urbano João Solis Garcia, conhecido como “Rodoviária Velha”, no período das
+            8h às 18h, de segunda a sexta. No final de semana - sábados e domingos - o serviço gratuito é oferecido
+            das 8h às 12h. Abaixo a lista das ruas que integram esse trajeto. Em qualquer parada nestas ruas, o
+            transporte não será cobrado:
+        </p>
+        <br>
+        <section class="tabs-section" id="grupo-tabs-a">
+            <div class="tabs-header">
+                <button class="tab-btn" data-target="exemplo1">SAÍDA: TERMINAL RODOVIÁRIO URBANO<br>
+                JOÃO SOLIS GARCIA (RODOVIÁRIA VELHA)</button>
+                <button class="tab-btn" data-target="exemplo2">SAÍDA: RUA TUPI</button>
+        
+            </div>
+        
+            <div class="tabs-content">
+                <div id="exemplo1" class="tab-content">
+                    <p>▸ Avenida Antônio Pires Pimentel;</p>
+                    <p>▸ Praça da Bíblia;</p>
+                    <p>▸ Barão de Juqueri;</p>
+                    <p>▸ Praça Raul Leme;</p>
+                    <p>▸ Cel. Leme;</p>
+                    <p>▸ Rua José Domingues;</p>
+                    <p>▸ Rua Tupi, no Taboão.</p>
+                </div>
+                <div id="exemplo2" class="tab-content">
+                    <p>
+                        Simultaneamente, um ônibus faz o trajeto inverso:
+                    </p>
+                    <p>▸ Praça 9 de Julho;</p>
+                    <p>▸ Rotatória da Praça São Francisco;</p>
+                    <p>▸ Avenida Dom Pedro I;</p>
+                    <p>▸ Rua José Domingues;</p>
+                    <p>▸ Travessa Gabriel Siqueira;</p>
+                    <p>▸ Rua Conselheiro Rodrigues Alves;</p>
+                    <p>▸ Rua Cel. João Leme;</p>
+                    <p>▸ Rua Dona Carolina;</p>
+                    <p>▸ Avenida Antônio Pires Pimentel, e</p>
+                    <p>▸ Rodoviária Velha.</p>
+                </div>
+            </div>
+        </section>
+        <br>
+        <p>
+            Essa iniciativa facilita a mobilidade urbana e reduz o uso de carros particulares, ajudando o meio ambiente
+            e tornando a vida mais econômica para os cidadãos.
+        </p>
+        <br>
+        <section class="card-horizontal-praticar">
+            <h2 class="titulo-praticar">
+                SAIBA MAIS
+            </h2>
+            <p class="texto-praticar">
+                As estradas no Estado de São Paulo são muito boas. O que a maioria das estradas têm em comum, é o grande
+                número de veículos. As estradas são mantidas por acordos entre o governo e concessionárias, que cobram pedágio,
+                isto é, uma taxa pelas passagens dos veículos. A frota de veículos no Estado de São Paulo é de aproximadamente 30
+                milhões, sendo cerca de 9 milhões somente na capital paulista. Os ônibus de viagens de longa distância costumam
+                ser confortáveis, com ar-condicionado, banheiros e assentos reclináveis. São chamados de ônibus leito.
+            </p>
+            <img class="imagem-praticar"
+                src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+                alt="Imagem de atividade prática">
+        </section>
+        <br>
+        <p>
+            Quando pensamos em ônibus ou veículos, é comum associarmos a eles algumas características como
+            cor, tamanho, velocidade, potência etc. Essas palavras que indicam características são chamadas de
+            adjetivos. Não se preocupe, vamos estudar isso com mais calma ao longo da unidade. Aqui no Brasil,
+            por exemplo, a maioria dos ônibus são verdes, amarelos, vermelhos ou azuis. Vamos aproveitar para
+            conhecer mais nomes de cores em português?
+        </p>
+        <br>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    VERMELHO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Vermelho;
+                    </p>
+                    <p>
+                        ▸ Vinho;
+                    </p>
+                    <p>
+                        ▸ Bordô;
+                    </p>
+                    <p>
+                        ▸ Coral;
+                    </p>
+                    <p>
+                        ▸ Salmão;
+                    </p>
+                    <p>
+                        ▸ Rosé.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    AZUL
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Azul;
+                    </p>
+                    <p>
+                        ▸ Azul-claro;
+                    </p>
+                    <p>
+                        ▸ Azul escuro;
+                    </p>
+                    <p>
+                        ▸ Azul-marinho;
+                    </p>
+                    <p>
+                        ▸ Turquesa;
+                    </p>
+                    <p>
+                        ▸ Anil.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    AMARELO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Amarelo;
+                    </p>
+                    <p>
+                        ▸ Amarelo-ouro;
+                    </p>
+                    <p>
+                        ▸ Amarelo-claro;
+                    </p>
+                    <p>
+                        ▸ Mostarda;
+                    </p>
+                    <p>
+                        ▸ Dourado;
+                    </p>
+                    <p>
+                        ▸ Bege;
+                    </p>
+                    <p>
+                        ▸ Marfim.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Quarto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    VERDE
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Verde;
+                    </p>
+                    <p>
+                        ▸ Verde-claro;
+                    </p>
+                    <p>
+                        ▸ Verde-escuro;
+                    </p>
+                    <p>
+                        ▸ Verde-limão;
+                    </p>
+                    <p>
+                        ▸ Verde-musgo;
+                    </p>
+                    <p>
+                        ▸ Verde-água.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Quinto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    PRETO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Preto;
+                    </p>
+                    <p>
+                        ▸ Grafite;
+                    </p>
+                    <p>
+                        ▸ Chumbo;
+                    </p>
+                    <p>
+                        ▸ Preto-fosco;
+                    </p>
+                    <p>
+                        ▸ Ébano.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Sexto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    BRANCO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Branco;
+                    </p>
+                    <p>
+                        ▸ Off-white;
+                    </p>
+                    <p>
+                        ▸ Neve;
+                    </p>
+                    <p>
+                        ▸ Gelo;
+                    </p>
+                    <p>
+                        ▸ Pérola.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Sétimo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    CINZA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Cinza-claro;
+                    </p>
+                    <p>
+                        ▸ Cinza-escuro;
+                    </p>
+                    <p>
+                        ▸ Prata;
+                    </p>
+                    <p>
+                        ▸ Cinza-chumbo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Oitavo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    MARROM
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Marrom;
+                    </p>
+                    <p>
+                        ▸ Caramelo;
+                    </p>
+                    <p>
+                        ▸ Chocolate;
+                    </p>
+                    <p>
+                        ▸ Café;
+                    </p>
+                    <p>
+                        ▸ Areia.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Nono acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    LARANJA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Laranja;
+                    </p>
+                    <p>
+                        ▸ Tangerina;
+                    </p>
+                    <p>
+                        ▸ Pêssego;
+                    </p>
+                    <p>
+                        ▸ Âmbar.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Decimo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    ROSA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Rosa;
+                    </p>
+                    <p>
+                        ▸ Rosa-claro;
+                    </p>
+                    <p>
+                        ▸ Rosa-choque;
+                    </p>
+                    <p>
+                        ▸ Fúcsia;
+                    </p>
+                    <p>
+                        ▸ Magenta.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Decimo prim. acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-headerc">
+                    ROXO/VIOLETA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-contentc">
+                    <p>
+                        ▸ Roxo;
+                    </p>
+                    <p>
+                        ▸ Lilás;
+                    </p>
+                    <p>
+                        ▸ Lavanda;
+                    </p>
+                    <p>
+                        ▸ Púrpura.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <p>
+            Além dos transportes públicos e privados já vistos, existe outro tipo comum no Brasil que merece destaque:
+            os fretados. Podem ser micro-ônibus, ônibus ou “vans”, e são contratados para serviços específicos. Pode
+            ser o traslado para o trabalho, escola, evento ou viagem particular, entre outros. Trata-se de um transporte
+            coletivo, que é mais flexível que o ônibus, porque pode fazer paradas em locais que não sejam pontos
+            de ônibus. Uma van transporta entre 8 e 20 pessoas, no máximo, tem pouco espaço para bagagens e os
+            passageiros sentam-se próximos uns aos outros. É comum dizer: “Nós vamos de fretado”, sem mencionar
+            se é uma van, micro-ônibus ou ônibus.
+        </p>
+        </div>
+    </section>
+    <section class="secao2" id="secao2">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745482633/lzh6tivsuwgnneylpzvp.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                2. VESTUÁRIO
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+
+            <p>
+                O Brasil é um país tropical e faz muito calor a maior parte do ano. Embora curto, o inverno pode ser bem
+                frio, principalmente porque as casas não são construídas com calefação. Nesta região Bragantina, o
+                calor começa por volta de outubro e ameniza em meados de abril. Isso não significa que no intervalo a
+                temperatura não chegue aos 30 graus, apenas significa que as noites são mais frias, o sol nasce mais
+                tarde e o calor se concentra mais ao redor do meio-dia.
+            </p>
+            <p>
+                Por isso, o outono e inverno são chamados de dias com quatro estações. Você sai com talvez 5-7 graus de
+                manhã, na hora do almoço pode fazer 25, e no final do dia cair a temperatura novamente. No verão, não
+                é incomum o dia começar com 20 graus e chegar a 35, as variações de temperatura são muito grandes.
+            </p>    
+            <p>
+                Vamos fazer uma lista com alguns tipos de roupas? Você já conhece as cores, pode completar com uma
+                cor na frente. Além da cor, você precisa saber qual é o seu tamanho, quando comprar roupas. Existem
+                dois sistemas: o numérico (de 36 até 54) e o letrado (de PP até XXL). Os calçados de adultos são vendidos
+                na numeração de 34 até 44. Embora seja difícil encontrar calçados com numeração grande, como são
+                comumente usados em outros países. Para você se adaptar facilmente ao clima e à cultura local, veja
+                abaixo algumas roupas essenciais no guarda-roupa brasileiro:
+            </p>    
+            <br>
+            <section class="slider-texto-container" data-slider-id="1">
+                <div class="slider-texto-wrapper">
+                    <div class="slide-texto ativo">
+                        <p class="conteudo-texto">
+                            Camiseta estampada; Regata; Cropped; Blusa de malha oversized; Camisa social; Blusa de manga longa;
+                            Camiseta básica
+                            (tons neutros);
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Calça jeans skinny; Shorts jeans; Calça de moletom; Saia jeans; Calça cargo; Calça de alfaiataria; Calça
+                            jeans reta ou
+                            clássica; Saia lápis ou saia midi; Bermuda de sarja;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Jaqueta jeans; Moletom; Jaqueta corta-vento; Suéter ou cardigã; Blazer; Jaqueta de couro ou de tecido;
+                            Sobretudo;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Vestido casual; Macacão ou jardineira; Biquíni/shorts de praia; Vestido midi;
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Tênis esportivo; Chinelo/sandália slide; Sapato social; Sandália confortável; Mocassim; Sapato oxford ou
+                            sapatilha.
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Boné; Mochila estilizada; Lenço ou echarpe; Bolsa estruturada;
+                        </p>
+                    </div>
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores">
+                </div>
+            </section>
+            <br>
+            <p>
+                Embora seja muito quente, o brasileiro só aderiu mais a informalidade no trabalho após a pandemia. Até
+                então, em muitas empresas esperava-se que as pessoas trabalhassem de terno e gravata. Mas, e na
+                universidade, qual é o código de vestimenta? Informal. Você pode frequentar a universidade de jeans,
+                bermudas, camiseta, tênis ou sandálias. Os professores costumam ter um repertório de vestimenta informal,
+                mas não casual. Você encontrará a mesma situação nos bares à noite, na cidade durante o dia, e somente
+                em igrejas ou eventos como aniversários e casamentos espera-se uma vestimenta mais elaborada.
+            </p>
+        </section>
+    <section class="secao1" id="secao3">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744848303/g7vh0r0sje52zd19k9ww.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                3. ADJETIVOS
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                Quando nós falamos em comidas e objetos, precisamos de adjetivos para melhor descrevê-los. O adjetivo
+                é uma classe de palavras que acompanha e caracteriza um substantivo, atribuindo a ele qualidades,
+                estados, aspectos ou características.
+            </p>
+            <p>
+                O adjetivo tem três principais funções:
+            </p>
+            <br>
+            <div class="topicos-destacados">
+                <p><strong>▶ Qualificar:</strong> atribui uma característica, qualidade ou defeito (ex.: menino educado, comida
+                    ruim);</p>
+                <p><strong>▶ Classificar:</strong> indica a categoria ou tipo (ex.: filme policial, escola pública);</p>
+                <p><strong>▶ Indicar estado ou condição:</strong> mostra como algo/alguém está (ex.: criança cansada, rua vazia).
+                </p>
+            </div>
+            <br>
+            <p>
+                Os adjetivos podem aparecer antes ou depois do substantivo. Normalmente, eles são usados depois do
+                substantivo, como em “viagem longa” ou “livro interessante”. Porém, também é possível usá-los antes do
+                substantivo, como em “bela paisagem” ou “longa viagem”. Tenha atenção, pois dependendo da posição
+                do adjetivo, o significado pode mudar completamente, como por exemplo “pobre homem” ou “homem
+                pobre”. O primeiro significa um homem coitado ou infeliz, enquanto o outro se refere a alguém que tem
+                pouco dinheiro.
+            </p>
+            <p>
+                Os adjetivos concordam em gênero (masculino ou feminino) e número (singular ou plural) com o substantivo
+                que acompanham. Veja os exemplos:
+            </p>
+            <br>
+            <section class="slider-texto-container tema-green" data-slider-id="2">
+                <!-- conteúdo do slider 2 -->
+                <div class="slider-texto-wrapper">
+                    <div class="slide-texto ativo">
+                        <p class="conteudo-texto">
+                            Menino educado / Menina educada<br>
+                            <strong>(gênero diferente)</strong>
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Menino educado / Meninos educados<br>
+                            <strong>(singular/plural)</strong>
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Mesa e cadeira bonitas<br>
+                            <strong>(mesmo gênero: feminino plural)</strong>
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            Menino e menina felizes<br>
+                            <strong>(gêneros diferentes: masculino e feminino, plural)</strong>
+                        </p>
+                    </div>
+            
+            
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores">
+                </div>
+            </section>
+            <br>
+            <p>
+                Os adjetivos também podem ser classificados de acordo com sua formação. Eles podem ser <strong>simples</strong>,
+                quando têm uma única palavra, como bonito, alto ou azul; ou <strong>compostos</strong>, quando formados por duas
+                ou mais palavras, como amarelo-claro ou socioeconômico. Além disso, há <strong>adjetivos primitivos</strong>, que
+                não derivam de outras palavras, como feliz ou leal, e <strong>adjetivos derivados</strong>, formados a partir de
+                outras
+                palavras, como bondoso (derivado de bom) ou nervoso (derivado de nervo).
+            </p>
+            <p>
+                Os adjetivos também têm diferentes graus para expressar a intensidade das características. O <strong>grau normal</strong>
+                é usado para indicar uma qualidade sem comparação, como em menina bonita. Já o <strong>grau comparativo</strong>
+                expressa uma comparação entre dois seres ou coisas, podendo ser de superioridade (mais alta que),
+                inferioridade (menos veloz que) ou igualdade (tão forte quanto). Por fim, temos o <strong>grau superlativo</strong>,
+                que
+                destaca uma qualidade em seu nível máximo. Ele pode ser relativo (a mais inteligente da turma, em
+                comparação com outras pessoas) ou absoluto (muito bom, que é o absoluto analítico; ou altíssimo, que é
+                o absoluto sintético).
+            </p>
+            <p>
+                <strong>Adjetivos pátrios</strong>, também conhecidos como gentílicos, indicam origem geográfica ou nacionalidade.
+                Alguns exemplos comuns são brasileiro, francês e paulista.
+            </p>
+            <p>
+                Outro ponto importante é a diferença entre <strong>adjetivo</strong> e <strong>locução adjetiva</strong>. Enquanto o
+                adjetivo é formado
+                por uma única palavra, como em amor materno, a locução adjetiva é uma expressão formada por duas
+                ou mais palavras com função semelhante, como amor de mãe.
+            </p>
+            <p>
+                Para facilitar a compreensão, veja o quadro a seguir:
+            </p>
+            <h2 class="titulo-quadrov"><span class="text-greenv">Quadro 1.</span> Resumo sobre os Adjetivos</h2>
+            <div class="quadroimg">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753855837/quadro_01_1_hrtmrf.png" alt="Imagem vertical"
+                    onclick="openModal(this)">
+            </div>
+            <!-- Modal para exibir a imagem ampliada -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong> Elaborado pela autora, 2025.</span>
+            </p>
+            <br>
+            <p>
+                Existe uma grande variedade de adjetivos. Usá-los demonstra apropriação do idioma e torna o diálogo
+                mais detalhado, mais profundo. Procure usar adjetivos quando falar português, para que a comunicação
+                seja mais clara, e, também, para que as pessoas compreendam melhor como você se sente em relação
+                às coisas e às situações.
+            </p>
+        </div>
+    </section>
+    <section class="secao4" id="secao4">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745601513/wglkd0x3l2uasackwlxn.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                4. ALIMENTAÇÃO
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                O brasileiro costuma fazer três ou quatro refeições por dia. Depois do café da manhã, ele almoça por volta
+                do meio-dia, quando é servido comida quente (arroz, feijão, carnes, legumes e/ou salada). Tudo que não
+                for arroz e feijão é chamado de mistura, pode ser a carne, um ovo, a salada ou uma torta. À tarde, muitos
+                tomam o café da tarde, que pode ser um pão com manteiga ou frios (frios são fatias de variados tipos de
+                queijo, presunto, ou outras especialidades) e talvez um pedaço de bolo. Muitos estrangeiros consideram as
+                sobremesas brasileiras muito doces. Um ingrediente comum usado em sobremesas é o leite condensado
+                (leite seco à vapor para ficar mais encorpado e doce). À noite, vem o jantar que, novamente, pode ser
+                comida quente. Não é incomum que o jantar seja o que sobrou do almoço, que é feito fresco diariamente.
+            </p>
+            <h2 class="titulo-quadrov"><span class="text-greenv">Tabela 1.</span> Conhecendo as principais refeições do Brasil</h2>
+            <div class="quadroimg">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753856248/tabela_01_emy5hd.png"
+                    alt="Imagem vertical" onclick="openModal(this)">
+            </div>
+            <!-- Modal para exibir a imagem ampliada -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong> Elaborado pela autora, 2025.</span>
+            </p>
+            <br>
+            <p>
+                A fome apareceu? O Brasil oferece diversas opções. Seja em casa, na universidade ou durante passeios,
+                é comum surgir a necessidade de se alimentar. O Brasil dispõe de uma ampla oferta de alimentos, sabores
+                e experiências gastronômicas para todos os gostos.
+            </p>
+            <p>
+                É possível encontrar:
+            </p>
+            <br>
+            <div class="topicos-destacados">
+                <p><strong>▶ </strong> Feiras com produtos naturais;</p>
+                <p><strong>▶ </strong> Supermercados e mercados locais;</p>
+                <p><strong>▶ </strong> Restaurantes de diversas culinárias;</p>
+                <p><strong>▶ </strong> Rotisseries, lanchonetes, padarias e bares;</p>
+                <p><strong>▶ </strong> Alimentos congelados e serviços de entrega (delivery).</p>
+            </div>
+            <br>
+            <p>
+                Há também especialidades regionais. Um exemplo é a tradicional <strong>linguiça bragantina</strong>, originária da
+                cidade de Bragança Paulista, no interior do Estado de São Paulo, que representa a diversidade da
+                culinária brasileira. Assim como Bragança, outras cidades do interior paulista também se destacam por
+                suas especialidades regionais.
+            </p>
+            <p>
+                O <strong>Circuito das Frutas</strong>, por exemplo, compreende um conjunto de municípios do interior paulista com
+                grande produção agrícola. A região se destaca por oferecer Frutas tropicais variadas, Hortaliças e legumes
+                frescos e Produtos de origem animal (para quem consome carne). Com essa diversidade, é possível
+                montar refeições equilibradas, seja utilizando ingredientes frescos ou optando por alimentos já prontos.
+            </p>
+            <p>
+                Para quem prefere preparar suas próprias refeições, a região oferece diversas opções de compra de
+                insumos: <strong>supermercados de rede, mercados de bairro</strong> e <strong>feiras livres</strong>. Essas feiras são experiências
+                sensoriais ricas, com muita variedade de aromas, cores e sabores. Além disso, visitar uma feira é também
+                uma oportunidade de vivenciar a cultura local e praticar o idioma em situações reais do cotidiano.
+            </p>
+            <p>
+                Por outro lado, para quem opta por comer fora de casa, há muitas alternativas práticas e acessíveis. As
+                <strong>padarias</strong> exercem papel central no cotidiano brasileiro. Nelas, além da compra de pães e leite, é possível:
+            </p>
+            <br>
+            <div class="topicos-destacados">
+                <p><strong>▶ </strong> Fazer refeições rápidas;</p>
+                <p><strong>▶ </strong> Adquirir salgados (alimentos fritos ou assados com recheios diversos, como carne, queijo ou
+                legumes);</p>
+                <p><strong>▶ </strong> Consumir bebidas como água, sucos naturais, café ou cerveja;</p>
+                <p><strong>▶ </strong> Comer pratos prontos, inclusive na modalidade “por quilo”.</p>
+            </div>
+            <br>
+            <p>
+                Esse modelo de <strong>self-service por quilo</strong> é muito popular no Brasil, especialmente no horário do almoço.
+            </p>
+            <p>
+                Funciona da seguinte maneira:
+            </p>
+            <br>
+            <section class="slider-texto-container tema-roxo" data-slider-id="2">
+                <!-- conteúdo do slider 2 -->
+                <div class="slider-texto-wrapper">
+                    <div class="slide-texto ativo">
+                        <p class="conteudo-texto">
+                            1. O cliente monta seu prato a partir de um buffet variado.
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            2. O prato é pesado no caixa.
+                        </p>
+                    </div>
+                    <div class="slide-texto">
+                        <p class="conteudo-texto">
+                            3. O valor é calculado com base no peso total, e não no tipo de alimento escolhido.
+                        </p>
+                    </div>
+                </div>
+            
+                <button class="seta-texto esquerda" onclick="mudarSlideTexto(this, -1)">&#10094;</button>
+                <button class="seta-texto direita" onclick="mudarSlideTexto(this, 1)">&#10095;</button>
+            
+                <div class="slider-texto-indicadores">
+                </div>
+            </section>
+            <br>
+            <p>
+                Durante a noite, é comum que muitos restaurantes operem no sistema à <strong>la carte</strong>, com pratos montados
+                conforme o pedido individual.
+            </p>
+            <h2 class="titulo-quadrov"><span class="text-greenv">Tabela 2.</span> Pratos e bebidas típicos do Brasil</h2>
+            <div class="quadroimg">
+                <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753857140/tabela_02_theeoc.png" alt="Imagem vertical"
+                    onclick="openModal(this)">
+            </div>
+            <!-- Modal para exibir a imagem ampliada -->
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImg">
+            </div>
+            <p class="fonte-imagem">
+                <span class="text-italic"><strong>Fonte:</strong> Elaborado pela autora, 2025.</span>
+            </p>
+            <br>
+            <p>
+                Também encontram-se inúmeras redes de Fast Food, internacionais e nacionais, restaurantes de comida regional,
+                as pizzarias e os populares restaurantes japoneses. Mas, e se você não quiser sair de casa, estiver sem opções,
+                mas a fome apertar? (sim, em português a fome aperta, significando que ela chegou com força e precisa ser
+                resolvida rapidamente). Você pode pedir o que desejar por delivery, telefonando diretamente para o local ou
+                usando um aplicativo do tipo Rappi, Uber Eats ou Ifood. Em pouco tempo a comida chegará ao seu endereço.
+            </p>
+            <br>
+            <!-- Bloco de vídeo com imagem de fundo -->
+            <div class="video-thumbnail" data-video="videoaqui">
+                <div class="video-bg"></div>
+                <div class="play-icon">&#9658;</div>
+            </div>
+            
+            <!-- Modal de Vídeo -->
+            <div id="videoModal" class="video-modal">
+                <div class="modal-content">
+                    <span class="fechar-modal">&times;</span>
+                    <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br>
+            <h1 class="titulo-azul">
+                4.1 MINHA PRIMEIRA COMPRA
+            </h1>
+            <p>
+                Quando você chegar ao Brasil, a sua primeira compra será, provavelmente, de alimentos ou de alguns objetos para
+                sua casa, se você não estiver hospedado em uma casa de família ou hotel. Para ajudar neste primeiro momento,
+                propomos uma lista de itens básicos, para que você possa selecionar os que são de seu interesse e necessidade:
+            </p>
+            <br>
+            <!-- Acordeons da Lista de Compras -->
+            <div class="acordeon-container">
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        BÁSICOS DA COZINHA
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Arroz;</p>
+                        <p>▸ Feijão;</p>
+                        <p>▸ Macarrão;</p>
+                        <p>▸ Óleo de soja ou azeite;</p>
+                        <p>▸ Sal;</p>
+                        <p>▸ Açúcar;</p>
+                        <p>▸ Farinha de trigo;</p>
+                        <p>▸ Molho de tomate;</p>
+                        <p>▸ Temperos (pimenta-do-reino, alho, cebola, orégano);</p>
+                        <p>▸ Caldo de legumes/carne/frango (tablete ou sachê).</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        PROTEÍNAS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Carne moída ou frango (peito ou coxa);</p>
+                        <p>▸ Ovos;</p>
+                        <p>▸ Salsicha ou linguiça;</p>
+                        <p>▸ Atum ou sardinha em lata.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        FRIOS E LATICÍNIOS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Leite;</p>
+                        <p>▸ Queijo fatiado;</p>
+                        <p>▸ Presunto/peito de peru;</p>
+                        <p>▸ Iogurte;</p>
+                        <p>▸ Manteiga ou margarina.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        HORTIFRUTI
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Alface;</p>
+                        <p>▸ Tomate;</p>
+                        <p>▸ Cebola;</p>
+                        <p>▸ Batata;</p>
+                        <p>▸ Alho;</p>
+                        <p>▸ Cenoura;</p>
+                        <p>▸ Banana;</p>
+                        <p>▸ Maçã;</p>
+                        <p>▸ Laranja;</p>
+                        <p>▸ Limão.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        PÃES E CEREAIS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Pão de forma;</p>
+                        <p>▸ Torradas ou biscoitos;</p>
+                        <p>▸ Cereal ou aveia.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        BEBIDAS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Café;</p>
+                        <p>▸ Chá;</p>
+                        <p>▸ Água mineral;</p>
+                        <p>▸ Suco de caixinha ou em pó.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        LIMPEZA
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Detergente;</p>
+                        <p>▸ Esponja de lavar louça;</p>
+                        <p>▸ Sabão em pó ou líquido;</p>
+                        <p>▸ Amaciante;</p>
+                        <p>▸ Água sanitária;</p>
+                        <p>▸ Desinfetante;</p>
+                        <p>▸ Vassoura/rodo (se ainda não tiver);</p>
+                        <p>▸ Panos de chão.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        HIGIENE PESSOAL
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Sabonete;</p>
+                        <p>▸ Shampoo e condicionador;</p>
+                        <p>▸ Papel higiênico;</p>
+                        <p>▸ Creme dental;</p>
+                        <p>▸ Escova de dentes;</p>
+                        <p>▸ Desodorante.</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        UTENSÍLIOS BÁSICOS (SE AINDA NÃO TIVER)
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Pratos;</p>
+                        <p>▸ Talheres;</p>
+                        <p>▸ Copos;</p>
+                        <p>▸ Panela média;</p>
+                        <p>▸ Frigideira;</p>
+                        <p>▸ Faca de cozinha;</p>
+                        <p>▸ Tábua de corte;</p>
+                    </div>
+                </div>
+            
+                <div class="acordeon">
+                    <div class="acordeon-headerd">
+                        EXTRAS ÚTEIS
+                        <i class="bx bx-chevron-down acordeon-icon"></i>
+                    </div>
+                    <div class="acordeon-contentd">
+                        <p>▸ Papel toalha;</p>
+                        <p>▸ Sacos de lixo;</p>
+                        <p>▸ Guardanapos;</p>
+                        <p>▸ Alumínio/filme plástico.</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>
+                Confira como pedir diferentes alimentos e bebidas em uma típica padaria brasileira:
+            </p>
+            <br>
+            <section class="slider-quadrinhos tema-azul" data-id="quadrinhos2">
+                <h2 class="titulo-slider">
+                    <span class="figura">Figura 2.</span> Diálogo: Na padaria
+                </h2>
+            
+                <div class="slider-container">
+                    <button class="seta esquerda" onclick="mudarSlide(-1)">&#10094;</button>
+            
+                    <div class="slider">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753112542/Quadrinho_4_1_sinyxr.png"
+                            alt="Quadrinho 1" class="slide ativo">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753112542/Quadrinho_4_2_kgwvno.png"
+                            alt="Quadrinho 2" class="slide">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753112542/Quadrinho_4_3_uy6efg.png"
+                            alt="Quadrinho 3" class="slide">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753112542/Quadrinho_4_4_g4vk8o.png"
+                            alt="Quadrinho 4" class="slide">
+                    </div>
+            
+                    <button class="seta direita" onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+                <!-- Agora os dots ficam aqui fora -->
+                <div class="slider-indicadores">
+                    <span class="dot" onclick="irParaSlide(0)"></span>
+                    <span class="dot" onclick="irParaSlide(1)"></span>
+                    <span class="dot" onclick="irParaSlide(2)"></span>
+                    <span class="dot" onclick="irParaSlide(3)"></span>
+                </div>
+            
+                <p class="fonte-imagem">
+                    <span class="text-italic"><strong>Fonte:</strong> USF, 2025.</span>
+                </p>
+            </section>
+            <!-- Modal de Imagem Ampliada -->
+            <div id="modal-imagem" class="modal-imagem">
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+                <img class="imagem-modal" id="imagem-ampliada" alt="Imagem ampliada">
+            
+                <!-- Setas de navegação -->
+                <button class="seta-modal esquerda" onclick="navegarModal(-1)">&#10094;</button>
+                <button class="seta-modal direita" onclick="navegarModal(1)">&#10095;</button>
+            
+                <!-- Indicador numérico -->
+                <div class="indicador-contador" id="contador-modal">1 / 1</div>
+            
+                <!-- Pontinhos -->
+                <div class="indicador-pontos" id="pontos-modal"></div>
+            </div>
+            <p>
+                São muitas as palavras novas e tipos de comida, mas fique tranquilo. Se você tiver dúvidas, peça ajuda.
+                Na cultura brasileira, é comum receber pessoas de fora, pode ser de outra cidade ou de outro país, e ficar
+                feliz em ajudá-los dentro dos estabelecimentos, pelos funcionários. Inclusive, em vários estabelecimentos
+                é esperado que você peça oralmente o que deseja, e, se não souber exatamente, o/a atendente ajuda.
+            </p>
+            <h1 class="titulo-azul">
+                4.2 COMPRAS
+            </h1>
+            <p>
+                Agora você já pode ir ao supermercado, à padaria ou a um restaurante. Um tópico presente nessas
+                situações que ainda não falamos é “o ponto”. Quando você pede carne, o garçom irá perguntar “Qual
+                é o ponto?” e você escolhe entre bem passado, malpassado ou no ponto. O ovo também precisa de
+                especificações: duro ou mole, referindo-se a gema do ovo, e pode ser cozido, mexido ou frito. O pão
+                francês (conhecido como pãozinho) pode ser branquinho ou mais assado. Você pode escolher quando
+                pedir pães na padaria. Um termo muito usado é “caprichado” que significa colocar um pouquinho extra. O
+                café pode ser paulista ou carioca. O café paulista costuma ser o café feito com coador, de forma manual,
+                enquanto o café carioca é o café expresso, diluído com mais água, para ficar mais fraco. O arroz pode ser
+                sequinho ou papa (quando parece mais um mingau). O feijão pode ser servido completo ou só o caldinho
+                (apenas a parte líquida, sem o grão). E a feijoada, prato típico brasileiro, que normalmente é servido às
+                quartas-feiras e sábados, é um prato de origem africana, no qual cozinha-se diferentes carnes no feijão
+                preto. A feijoada light é a feijoada com apenas carnes nobres, enquanto a feijoada completa é a feijoada
+                com todas as partes do porco. Para ampliar ainda mais a sua compreensão, assista ao vídeo a seguir.
+            </p>
+            <br>
+            <!-- Bloco de vídeo com imagem de fundo -->
+            <div class="video-thumbnail" data-video="videoaqui">
+                <div class="video-bg"></div>
+                <div class="play-icon">&#9658;</div>
+            </div>
+            
+            <!-- Modal de Vídeo -->
+            <div id="videoModal" class="video-modal">
+                <div class="modal-content">
+                    <span class="fechar-modal">&times;</span>
+                    <iframe id="videoIframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br>
+            <p>
+                Abaixo, trazemos um vocabulário com as características de alguns alimentos encontrados no Brasil, para
+                você ampliar seu repertório:
+            </p>
+            <br>
+            <div class="flip-cards-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Pão francês</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859431/5153_kpohea.jpg" alt="Pão francês">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Ovo</div>
+                        <div class="flip-card-back">
+                            <img src="" alt="Ovo">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Frango</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859433/peitos-de-frango-crus-na-tabua-de-madeira_ccbruq.jpg" alt="Frango">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Carne bovina</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859439/vista-lateral-de-carne-de-bife-marmorizado-cru-com-alecrim-em-um-carrinho_a8ilf8.jpg" alt="Carne bovina">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Queijo</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859433/queijo-alto-angulo-na-mesa_leclxq.jpg" alt="Queijo">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Leite</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753861267/jarra-de-vidro-cheia-de-leite_v7tymr.jpg" alt="Leite">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Arroz</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859433/quadro-completo-de-arroz-branco-cru-com-colher-de-pau_ionses.jpg" alt="Arroz">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Feijão</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859433/selecao-plana-de-feijao-cru_yw51z3.jpg" alt="Feijão">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Batata</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859438/tigela-de-vista-superior-com-batatas_jhjrgq.jpg" alt="Batata">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Alface</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859433/salada-natural-plana-leiga_lpcb8p.jpg" alt="Alface">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Tomate</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753861268/vista-close-up-de-tomate-no-prato-de-cesta-na-mesa-de-madeira_c1rdvd.jpg" alt="Tomate">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Banana</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859431/arranjo-de-vista-superior-com-bananas_m6egcv.jpg" alt="Banana">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Maçã</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859432/close-up-de-vermelho-maduro-organica-macas_a65npg.jpg" alt="Maçã">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Cenoura</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859432/bando-de-cenouras-frescas-com-folhas-verdes-sobre-mesa-de-madeira_cfqu1d.jpg" alt="Cenoura">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Coco</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859432/coco-isolado-no-fundo-branco_spdv6i.jpg" alt="Coco">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Pudim</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859432/creme-de-caramelo-no-prato-branco-sobremesa-popular-no-cafe_qdsabl.jpg" alt="Pudim">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Brigadeiro</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753861267/tiro-de-foco-seletivo-vertical-de-um-delicioso-brigadeiroinkles_x8mbac.jpg" alt="Brigadeiro">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Coxinha</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859431/arranjo-de-comida-brasileira-no-prato_kvaruc.jpg" alt="Coxinha">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Bolo de cenoura</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859432/close-de-maos-segurando-um-bolo-delicioso_z65ftc.jpg" alt="Bolo de cenoura">
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">Suco de laranja</div>
+                        <div class="flip-card-back">
+                            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1753859439/vidro-sumo-de-laranja-colocado-na-madeira_rad0qa.jpg" alt="Suco de laranja">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <p>
+                Embora não seja possível listar todos os alimentos, com os alimentos acima e suas características, você está
+                preparado para ir a um restaurante, uma festa ou ao supermercado. Lembre-se que no Brasil não é obrigatório
+                dar gorjetas, mas o garçom perguntará se pode incluir os 10% dos serviços dele na nota. A mesma coisa se dá
+                com os motoboys (motoristas de motocicletas que levam comida do estabelecimento até você), eles recebem
+                um pequeno valor para cada viagem, mas a gorjeta não está inclusa no valor, e é opcional.
+            </p>
+            <section class="atividade-sectionb">
+                <div class="atividade-headerb">
+                    <h2>AGORA É SUA VEZ!</h2>
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745601513/wglkd0x3l2uasackwlxn.png"
+                        alt="Ícone título">
+                </div>
+            
+                <p class="atividade-textob">
+                    Aprender uma nova língua é um processo, e praticar faz toda a diferença. Que tal reservar um tempinho para
+                    exercitar o que estudamos até agora? Use os exercícios como uma forma de revisar e se familiarizar ainda
+                    mais com o conteúdo. Vamos nessa?
+                </p>
+            
+                <div class="atividade-quizz">
+                    <a href="#" onclick="abrirQuizz(event)">
+                        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869741/r1sc3oyzzu1ca5mqiud4.png"
+                            alt="Imagem para abrir o quiz">
+                    </a>
+                </div>
+            
+                <div id="iframe-container" style="display: none; margin-top: 20px; position: relative;">
+                    <!-- Botão de fechar -->
+                    <button onclick="fecharQuizz()" class="btn-fechar-quizz">&times;</button>
+            
+                    <!-- Iframe do Genially -->
+                    <iframe id="quizz-iframe" src="" width="100%" height="500px"
+                        style="border: 2px solid #134969; border-radius: 10px;"></iframe>
+                </div>
+            </section>
+    </div>
+    </section>
+    <section class="conclusao" id="conclusao">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745524189/vm6embgebhgp2mhck5qn.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                CONCLUSÃO
+            </h1>
+        </div>
+        <div class="conteudo-secao">
+            <p>
+                Ao finalizar esta unidade, esperamos que você perceba como a comunicação fica muito mais clara e
+                interessante quando, além do vocabulário, conseguimos usar os adjetivos para dar nosso toque pessoal
+                ao que dizemos.
+            </p>
+            <p>
+                Pense, por exemplo, em quantos adjetivos podem ser usados em relação ao sabor das comidas: doce,
+                salgado, amargo, azedo, picante, apimentado, suave, forte, temperado, sem graça, enjoativo, refrescante
+                e rico (em sabor). Se pensarmos na textura, podemos usar: crocante, macio, cremoso, seco, molhado,
+                encorpado, areoso, esfarelado, pegajoso, aveludado, grudento, fofinho, duro e mastigável. Mas se
+                pensarmos na aparência, costumamos dizer “essa comida está com uma cara boa”. Por fim, a comida
+                pode estar quente, fria, morna, pelando, gelada, entre outras.
+            </p>
+            <p>
+                As roupas podem ser bonitas, feias, estranhas, lindas, horrorosas, grandes, pequenas, apertadas, largas,
+                ou simplesmente dizemos “o caimento desta roupa é ótimo/péssimo”, além de culpabilizar as roupas pela
+                nossa aparência “Essa roupa me deixa com cara de desleixado/sério/descolado”.
+            </p>
+            <p>
+                Conhecer o vocabulário é importante, como já comentamos, mas é a forma que você usa o vocabulário
+                que vai tornar sua comunicação fiel à quem você é. Conhecer o significado das palavras e termos ajuda
+                você a compreender o novo idioma, mas a escolha de quais palavras e termos adotar para a sua fala,
+                é sua. Afinal, o que falamos e como falamos, demonstra muito do que pensamos e do que sentimos.
+                Principalmente, quando se trata de adjetivos. Continue praticando e usando tudo o que aprendeu até
+                aqui, para se expressar com segurança e autenticidade em português.
+            </p>
+
+            <div id="download" class="download-section">
+                <a href="" class="download-btn">
+                    Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="referencias" id="referencias">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869736/jyzm19p9bgggekjdrgnz.png"
+            alt="Imagem topo da seção" class="imagem-topo">
+        <div class="faixa-verde">
+            <h1 class="titulo-secao">
+                REFERÊNCIAS
+            </h1>
+        </div>
+        <br>
+        <div class="conteudo-secao">
+            <p>
+                ANDRÉ, H. A. <strong>Gramática ilustrada</strong>. 5. ed. São Paulo: Moderna, 1997.
+            </p>
+            <p>
+                AZEREDO, J. C. <strong>Gramática Houaiss da língua portuguesa</strong>. 2. ed. São Paulo: Publifolha, 2008.
+            </p>
+            <p>
+                BECHARA. E. <strong>Moderna gramática da Língua Portuguesa</strong>. Rio de Janeiro: Lucerna, 2001.
+            </p>
+            <p>
+                BORGES NETO, J. <strong>Adjetivos</strong>: predicados extensionais e predicados intensionais. 1979. Dissertação
+                (Mestrado em Linguística) – Departamento de Linguística da Universidade Estadual de Campinas,
+                Campinas, 1979.
+            </p>
+        </div>
+        <br>
+    </section>
+    <!-- Seção com os créditos e ficha técnica -->
+    <section class="ficha-tecnica">
+        <p>CASA NOSSA SENHORA DA PAZ – AÇÃO SOCIAL FRANCISCANA, PROVÍNCIA FRANCISCANA DA <br>
+            IMACULADA CONCEIÇÃO DO BRASIL – ORDEM DOS FRADES MENORES</p>
+        <br>
+        <p><strong>GESTOR DO CENTRO DE INOVAÇÃO E SOLUÇÕES EDUCACIONAIS - CISE</strong>
+            Franklin Portela Correia</p>
+    
+        <p><strong>COORDENADOR NÚCLEO DE RELAÇÕES INTERNACIONAIS - NRI</strong>
+            Lucas da Silveira Andrade</p>
+    
+        <p><strong>SUPERVISORA EDUCACIONAL</strong>
+            Juliane Cristine Batista</p>
+    
+        <p><strong>DESIGNER INSTRUCIONAL</strong>
+            Leticia dos Santos Vilela<br>
+            Sara Marques Batista</p>
+    
+        <p><strong>REVISÃO TEXTUAL</strong>
+            Luisa de Souza</p>
+    
+        <p><strong>PROJETO GRÁFICO</strong>
+            Lucas Ichimaru Testa<br>
+            Simone Aparecida Barbosa</p>
+    
+        <p><strong>DESENVOLVEDOR</strong>
+            Pedro Vinicius Pires de Oliveira Dias</p>
+    
+        <p><strong>PRODUTOR AUDIOVISUAL</strong>
+            Cassio Martins de Carvalho</p>
+    
+        <p><strong>EDIÇÃO DE VÍDEOS</strong>
+            Rafael da Silva Oliveira<br>
+            Hugo Henrique Ferreira da Silva</p>
+    
+        <p><span class="paragraforeduzido">
+                © 2025 Universidade São Francisco<br>
+                Avenida São Francisco de Assis, 218<br>
+                CEP 12916-900 – Bragança Paulista/SP
+        </p></span>
+    </section>
+    <section class="logo-final">
+        <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1746464849/kawkuex8fxesnmqpek5n.png"
+            alt="Logo do Projeto">
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(29, 91, 122, 0.438)'; // Opacidade 80% rgba(29, 91, 122, 0.438);
+                } else {
+                    navbar.style.backgroundColor = '#134969'; // Cor original sem transparência
+                }
+            });
+        function configurarTabs(containerId) {
+                const container = document.getElementById(containerId);
+                if (!container) return; // Se não existir, evita erro no console
+
+                const buttons = container.querySelectorAll('button');
+                const contents = container.querySelectorAll('.tab-content');
+                const contentWrappers = container.querySelectorAll('.tabs-content, .tabs-contentb, .tabs-contentc, .tabs-contentd');
+
+                // Garante que tudo comece fechado
+                buttons.forEach(btn => btn.classList.remove('ativo'));
+                contents.forEach(content => content.classList.remove('ativo'));
+                contentWrappers.forEach(wrapper => wrapper.classList.remove('ativo'));
+
+                buttons.forEach((button, index) => {
+                    // Clique com mouse
+                    button.addEventListener('click', function () {
+                        ativarTab(this);
+                    });
+
+                    // Suporte ao teclado ← e →
+                    button.addEventListener('keydown', function (e) {
+                        if (e.key === 'ArrowRight') {
+                            e.preventDefault();
+                            const nextIndex = (index + 1) % buttons.length;
+                            buttons[nextIndex].focus();
+                        } else if (e.key === 'ArrowLeft') {
+                            e.preventDefault();
+                            const prevIndex = (index - 1 + buttons.length) % buttons.length;
+                            buttons[prevIndex].focus();
+                        } else if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            ativarTab(this); // Ativa com Enter ou Espaço
+                        }
+                    });
+                });
+
+                function ativarTab(botao) {
+                    const tabId = botao.getAttribute('data-target');
+                    const targetContent = container.querySelector(`#${tabId}`);
+                    const isActive = botao.classList.contains('ativo');
+
+                    // Fecha todos
+                    buttons.forEach(btn => {
+                        btn.classList.remove('ativo');
+                        btn.setAttribute('aria-selected', 'false');
+                    });
+                    contents.forEach(content => content.classList.remove('ativo'));
+                    contentWrappers.forEach(wrapper => wrapper.classList.remove('ativo'));
+
+                    // Ativa se ainda não estiver ativo
+                    if (!isActive) {
+                        botao.classList.add('ativo');
+                        botao.setAttribute('aria-selected', 'true');
+                        if (targetContent) {
+                            targetContent.classList.add('ativo');
+                            const parentWrapper = targetContent.closest('.tabs-content, .tabs-contentb, .tabs-contentc, .tabs-contentd');
+                            if (parentWrapper) parentWrapper.classList.add('ativo');
+                        }
+                    }
+                }
+
+                // Ativa a primeira aba por padrão
+                if (buttons.length > 0) {
+                    ativarTab(buttons[0]);
+                }
+            }
+
+            // Inicializar os grupos de tabs
+            configurarTabs('grupo-tabs-a');
+            configurarTabs('grupo-tabs-b');
+            configurarTabs('grupo-tabs-c');
+            configurarTabs('grupo-tabs-d');
+
+        document.querySelectorAll('.slider-quadrinhos').forEach((sliderContainer) => {
+                const slider = sliderContainer.querySelector('.slider');
+                const slides = slider.querySelectorAll('.slide');
+                const dots = sliderContainer.querySelectorAll('.dot');
+                let currentIndex = 0;
+
+                function mostrarSlide(index) {
+                    currentIndex = (index + slides.length) % slides.length;
+                    slides.forEach(slide => slide.classList.remove('ativo'));
+                    dots.forEach(dot => dot.classList.remove('ativo'));
+
+                    slides[currentIndex].classList.add('ativo');
+                    dots[currentIndex].classList.add('ativo');
+                }
+
+                // Atribui os handlers aos botões de seta
+                sliderContainer.querySelector('.seta.esquerda').addEventListener('click', () => {
+                    mostrarSlide(currentIndex - 1);
+                });
+                sliderContainer.querySelector('.seta.direita').addEventListener('click', () => {
+                    mostrarSlide(currentIndex + 1);
+                });
+
+                // Atribui os handlers aos dots
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        mostrarSlide(index);
+                    });
+                });
+
+                // Inicializa
+                mostrarSlide(0);
+            });
+            document.querySelectorAll('.acordeon-header, .acordeon-headerb, .acordeon-headerc, .acordeon-headerd').forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const isVisible = content.style.display === 'block';
+                        content.style.display = isVisible ? 'none' : 'block';
+                        const icon = header.querySelector('.acordeon-icon');
+                        if (icon) {
+                            icon.classList.toggle('bx-chevron-up', !isVisible);
+                            icon.classList.toggle('bx-chevron-down', isVisible);
+                        }
+                    });
+                });
+
+                const thumbnails = document.querySelectorAll('.video-thumbnail');
+                    const modal = document.getElementById('videoModal');
+                    const iframe = document.getElementById('videoIframe');
+                    const fechar = document.querySelector('.fechar-modal');
+
+                    thumbnails.forEach(thumbnail => {
+                        thumbnail.addEventListener('click', () => {
+                            const videoLink = thumbnail.getAttribute('data-video');
+                            iframe.src = videoLink + "?autoplay=1";
+                            modal.style.display = 'flex';
+                        });
+                    });
+
+                    fechar.addEventListener('click', () => {
+                        modal.style.display = 'none';
+                        iframe.src = '';
+                    });
+
+                    window.addEventListener('click', (e) => {
+                        if (e.target === modal) {
+                            modal.style.display = 'none';
+                            iframe.src = '';
+                        }
+                    });
+                    // Abrir modal ao clicar na imagem
+                    function openModal(imgElement) {
+                        let modal = document.getElementById("imageModal");
+                        let modalImg = document.getElementById("modalImg");
+
+                        modal.style.display = "flex";
+                        modalImg.src = imgElement.src;
+                    }
+
+                    // Fechar modal ao clicar no fundo ou no botão "X"
+                    function closeModal() {
+                        document.getElementById("imageModal").style.display = "none";
+                    }
+
+                   let imagensModal = [];
+                    let indiceModal = 0;
+
+                    function prepararModal() {
+                        document.querySelectorAll('.slider-quadrinhos').forEach((sliderContainer) => {
+                            const imagens = sliderContainer.querySelectorAll('.slide');
+                            imagens.forEach((img, index) => {
+                                img.style.cursor = 'pointer';
+                                img.addEventListener('click', () => {
+                                    imagensModal = Array.from(imagens).map(i => i.src);
+                                    indiceModal = index;
+                                    abrirModal(imagensModal[indiceModal]);
+                                });
+                            });
+                        });
+                    }
+
+                    function abrirModal(src) {
+                        document.getElementById('imagem-ampliada').src = src;
+                        document.getElementById('modal-imagem').classList.add('ativo');
+                        atualizarContador();
+                        atualizarPontos();
+                    }
+
+                    function fecharModal() {
+                        document.getElementById('modal-imagem').classList.remove('ativo');
+                    }
+
+                    function navegarModal(direcao) {
+                        indiceModal = (indiceModal + direcao + imagensModal.length) % imagensModal.length;
+                        document.getElementById('imagem-ampliada').src = imagensModal[indiceModal];
+                        atualizarContador();
+                        atualizarPontos();
+                    }
+
+                    function atualizarContador() {
+                        document.getElementById('contador-modal').textContent = `${indiceModal + 1} / ${imagensModal.length}`;
+                    }
+
+                    function atualizarPontos() {
+                        const container = document.getElementById('pontos-modal');
+                        container.innerHTML = '';
+                        imagensModal.forEach((_, i) => {
+                            const ponto = document.createElement('span');
+                            if (i === indiceModal) ponto.classList.add('ativo');
+                            ponto.addEventListener('click', () => {
+                                indiceModal = i;
+                                document.getElementById('imagem-ampliada').src = imagensModal[i];
+                                atualizarContador();
+                                atualizarPontos();
+                            });
+                            container.appendChild(ponto);
+                        });
+                    }
+
+                    document.addEventListener('DOMContentLoaded', prepararModal);
+
+                    document.querySelectorAll('.slider-texto-container').forEach(initSliderTexto);
+
+                        function initSliderTexto(container) {
+                            const slides = container.querySelectorAll('.slide-texto');
+                            const indicatorsContainer = container.querySelector('.slider-texto-indicadores');
+
+                            indicatorsContainer.innerHTML = ''; // Limpa indicadores anteriores
+
+                            // Cria os dots dinamicamente
+                            slides.forEach((_, index) => {
+                                const dot = document.createElement('span');
+                                dot.classList.add('dot-texto');
+                                dot.onclick = () => mostrarSlide(index);
+                                indicatorsContainer.appendChild(dot);
+                            });
+
+                            const dots = container.querySelectorAll('.dot-texto');
+                            let currentIndex = 0;
+
+                            function mostrarSlide(index) {
+                                slides.forEach(slide => slide.classList.remove('ativo'));
+                                dots.forEach(dot => dot.classList.remove('ativo'));
+
+                                currentIndex = (index + slides.length) % slides.length;
+
+                                slides[currentIndex].classList.add('ativo');
+                                dots[currentIndex].classList.add('ativo');
+                            }
+
+                            // Armazena a função no container para chamadas externas
+                            container.mostrarSlideTexto = mostrarSlide;
+                            container.getCurrentIndex = () => currentIndex;
+                            mostrarSlide(0);
+                        }
+
+                        // Chamado pelos botões de seta
+                        function mudarSlideTexto(button, direcao) {
+                            const container = button.closest('.slider-texto-container');
+                            const currentIndex = container.getCurrentIndex();
+                            container.mostrarSlideTexto(currentIndex + direcao);
+                        }
+
+                        // Chamado pelos dots (não necessário, mas deixado por compatibilidade)
+                        function irParaSlideTexto(dot, index) {
+                            const container = dot.closest('.slider-texto-container');
+                            container.mostrarSlideTexto(index);
+                        }
+    </script>
+</body>
+</html>
