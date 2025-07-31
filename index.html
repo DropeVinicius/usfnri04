@@ -3899,7 +3899,7 @@
                 </p>
             
                 <div class="atividade-quizz">
-                    <a href="#" onclick="abrirQuizz(event)">
+                    <a href="https://view.genially.com/68701305abd58da26eac9c2a" onclick="abrirQuizz(event)">
                         <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1745869741/r1sc3oyzzu1ca5mqiud4.png"
                             alt="Imagem para abrir o quiz">
                     </a>
@@ -4336,6 +4336,23 @@
                             const container = dot.closest('.slider-texto-container');
                             container.mostrarSlideTexto(index);
                         }
+                        function abrirQuizz(event) {
+                                    event.preventDefault();
+                                    const iframeContainer = document.getElementById('iframe-container');
+                                    const iframe = document.getElementById('quizz-iframe');
+
+                                    // Link real do Genially
+                                    iframe.src = 'https://view.genially.com/6862e3d435d89353fbb07c6c';
+                                    iframeContainer.style.display = 'block';
+                                }
+
+                                function fecharQuizz() {
+                                    const iframeContainer = document.getElementById('iframe-container');
+                                    const iframe = document.getElementById('quizz-iframe');
+
+                                    iframe.src = ''; // limpa o conteúdo do iframe
+                                    iframeContainer.style.display = 'none';
+                                }         
     </script>
 </body>
 </html>
